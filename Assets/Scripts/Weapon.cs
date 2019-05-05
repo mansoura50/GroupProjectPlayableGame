@@ -9,10 +9,32 @@ public class Weapon : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetButtonDown("Fire1")) {
-            Shoot();
+        //experimenting with directional shooting
+        //shoot right
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            go.GetComponent<Bullet>().xSpeed = 1f;
         }
-   
+        //shoot left
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            go.GetComponent<Bullet>().xSpeed = -1f;
+        }
+        //shoot up
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            go.GetComponent<Bullet>().ySpeed = 1f;
+        }
+        //shoot down
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            go.GetComponent<Bullet>().ySpeed = -1f;
+        }
+
     }
 
     void Shoot() {

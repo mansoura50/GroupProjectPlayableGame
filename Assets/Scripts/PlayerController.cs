@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	//player speed
-	public float moveSpeed;
+    //player speed
+    public float moveSpeed;
 
 	//identifies animator
 	private Animator anim; 
@@ -98,6 +98,11 @@ public class PlayerController : MonoBehaviour {
 		anim.SetBool("PlayerMoving",playerMoving);
 		anim.SetFloat("LastMoveX", lastMove.x);
 		anim.SetFloat("LastMoveY", lastMove.y);
+
+
+
+       
+
 
     }
 }
