@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     //player speed
     public float moveSpeed;
-
+    public GameObject bullet;
 	//identifies animator
 	private Animator anim; 
 
