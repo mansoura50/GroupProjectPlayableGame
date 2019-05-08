@@ -11,25 +11,25 @@ public class Weapon : MonoBehaviour {
     void Update() {
         //experimenting with directional shooting
         //shoot right
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             go.GetComponent<Bullet>().xSpeed = 1f;
         }
         //shoot left
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             go.GetComponent<Bullet>().xSpeed = -1f;
         }
         //shoot up
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             go.GetComponent<Bullet>().ySpeed = 1f;
         }
         //shoot down
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             GameObject go = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             go.GetComponent<Bullet>().ySpeed = -1f;
